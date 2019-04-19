@@ -4,18 +4,28 @@
 <head>
 	<meta charset="utf-8">
 	<script src="./music-tempo/dist/browser/music-tempo.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <!-- https://www.npmjs.com/package/music-tempo -->
 
 <body>
-	<script src="script.js"></script>
-	<input type="file" id="fileInput" onchange="upload();"></input>
-	<audio controls id="myaudio">
-		<source id="link" src="test.mp3" type="audio/mpeg">
-	</audio>
-	<a href="javascript:play()">Play</a>
-	<div id="bar" style="background: #555555">-</div>
+	<div data-role="page" data-theme="a">
+		<div data-role="header">
+			<h1>Infinite-time Player</h1>
+		</div>
+		<div data-role="content">
+			<script src="script.js"></script>
+			<input type="file" id="fileInput" onchange="upload();"></input>
+			<audio controls id="myaudio">
+				<source id="link" src="test.mp3" type="audio/mpeg">
+			</audio>
+			<a href="javascript:play()">Play</a>
+			<div id="bar" style="background: #555555">-</div>
+		</div>
+	</div>
 </body>
 
 </html>
