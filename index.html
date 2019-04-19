@@ -10,13 +10,12 @@
 
 <body>
 	<script src="script.js"></script>
-	<a href="javascript:main()">初始化</a>
-	<input type="file" id="fileInput"></input>
+	<input type="file" id="fileInput" onchange="upload();"></input>
 	<audio controls id="myaudio">
-		<source src="test.mp3" type="audio/mpeg">
+		<source id="link" src="test.mp3" type="audio/mpeg">
 	</audio>
 	<a href="javascript:play()">Play</a>
-	<div id="bar" style="background: #555555">   </div>
+	<div id="bar" style="background: #555555">-</div>
 </body>
 
 </html>
