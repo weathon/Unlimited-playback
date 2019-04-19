@@ -34,43 +34,15 @@ main = function () {
 				console.log("mt.beats");
                 console.log(String(mt.beats));
                 console.log("Audio Data");
-                console.log(audioData)
+                console.log(audioData)//做了这么大半天居然没有想到直接输出mt，文档不全？没看DEMO~
 			}
         }
         
 
-    
-// function play()
-// {
-//     document.getElementById("myaudio").play();
-//     var time=0;
-//     console.log(mt.beats.length);
-//     for(let i=0;i<mt.beats.length;i++)
-//     {
-//         time+=mt.beats[i];
-//         setTimeout(function(){
-//             console.log(i)
-//         },time*1000)
-//     }
-// }
-
-// function play()
-// {
-//     document.getElementById("myaudio").play();
-//     console.log(mt.beats.length);
-//     for(let i=0;i<mt.beats.length;i++)
-//     {
-//         setTimeout(function(){
-//             console.log(i)
-//         },i*1000)
-//     }
-        
-
-// }
-
 
 function play()
 {
+    document.getElementById("link").setAttribute("src",document.getElementById("fileInput").files)
     document.getElementById("myaudio").play();
     console.log(mt.beats.length);
     for(let i=0;i<mt.beats.length;i++)
