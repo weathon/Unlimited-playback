@@ -1,0 +1,39 @@
+import numpy as np
+import librosa
+import librosa.output
+import pickle
+import librosa.segment
+import librosa.display
+#https://mhy12345.xyz/tutorials/librosa-samples/
+# path=input("Path>")
+# if not path:
+#     path="test.mp3"
+# y, sr = librosa.load(path)
+# y_harmonic, y_percussive = librosa.effects.hpss(y)
+# tempo, beat_frames = librosa.beat.beat_track(y=y_percussive,sr=sr)
+# with open("temp.pkl","wb") as f:
+#     pickle.dump([y,sr,y_harmonic,y_percussive,tempo,beat_frames],f)
+with open("temp.pkl","rb") as f:
+    y,sr,y_harmonic,y_percussive,tempo,beat_frames=pickle.load(f)
+# print(beat_frames)
+# time=librosa.frames_to_time(beat_frames, sr=sr)
+# print(time)
+# cqt = np.abs(librosa.cqt(y, sr=sr, hop_length=512))
+# print(cqt)
+# ylist=librosa.segment.subsegment(data=cqt,frames=beat_frames)
+# print(ylist)
+# res/len(y)=beat_frames[i]/len(beat_frames)
+# res=(beat_frames[i]/len(beat_frames))*len(y)
+# librosa.output.write_wav("a.wav",y=y[:int(beat_frames[5]/len(beat_frames))*len(y)],sr=sr)
+# print(beat_frames)
+# tempo, beats = librosa.beat.beat_track(y=y, sr=sr, hop_length=512)
+# beat_times = librosa.frames_to_time(beats, sr=sr, hop_length=512)
+# cqt = np.abs(librosa.cqt(y, sr=sr, hop_length=512))
+# subseg = librosa.segment.subsegment(cqt, beats, n_segments=2)
+# subseg_t = librosa.frames_to_time(subseg, sr=sr, hop_length=512)
+# print(subseg)
+time=librosa.get_duration(y=y,sr=sr)
+total_beat=librosa.time_to_frames(time)
+print((time,total_beat,beat_frames))
+for i in range()
+first=y[:int()]

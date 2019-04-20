@@ -16,16 +16,23 @@
 		<div data-role="header">
 			<h1>Infinite-time Player</h1>
 		</div>
-		<div data-role="content">
+		<div data-role="content" id="content">
 			<script src="script.js"></script>
-			<input type="file" id="fileInput" onchange="upload();"></input>
-			<audio controls id="myaudio">
-				<source id="link" src="test.mp3" type="audio/mpeg">
-			</audio>
-			<a href="javascript:play()">Play</a>
+			<form>
+				<input type="file" data-role="button" id="fileInput" onchange="upload();"></input>
+				<!-- <button data-role="button" onclick="document.getElementById(fileInput).onclick()">Select a music file.</button> -->
+				<!-- style="opacity: 0;display: none;visibility: hidden;" -->
+			</form>
+			<!-- <audio controls id="myaudio">
+				<source id="link" src="" type="audio/mpeg">
+			</audio> -->
+			<a href="javascript:play()" style="opacity: 0;display: none;visibility: hidden;" id="play" data-role="button">Play</a>
 			<div id="bar" style="background: #555555">-</div>
 		</div>
 	</div>
 </body>
 
 </html>
+
+
+<!-- 全新思路，先滤波出几个波段，然后每个波段取声音突变点作为音符！！！！还是不能全部前端？ -->

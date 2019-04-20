@@ -29,14 +29,15 @@ var calcTempo = function (buffer) {
 
     //做了这么大半天居然没有想到直接输出mt，文档不全？没看DEMO~
     console.log(mt);
+    document.getElementById("play").setAttribute("style","")
 }
 
 
 
 
 function play() {
-    document.getElementById("link").setAttribute("src", document.getElementById("fileInput").files)
-    document.getElementById("myaudio").play();
+    // document.getElementById("link").setAttribute("src", document.getElementById("fileInput").files.name)
+    // document.getElementById("myaudio").play();
     console.log(mt.beats.length);
     for (let i = 0; i < mt.beats.length; i++) {
         setTimeout(function () {
