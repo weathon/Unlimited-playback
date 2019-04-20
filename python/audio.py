@@ -7,16 +7,16 @@ import librosa.display
 import random
 oo=5000000000000
 # https://mhy12345.xyz/tutorials/librosa-samples/
-# path = input("Path>")
-# if not path:
-#     path = "test.mp3"
-# y, sr = librosa.load(path)
-# y_harmonic, y_percussive = librosa.effects.hpss(y)
-# tempo, beat_frames = librosa.beat.beat_track(y=y_percussive, sr=sr)
+path = input("Path>")
+if not path:
+    path = "test.mp3"
+y, sr = librosa.load(path)
+y_harmonic, y_percussive = librosa.effects.hpss(y)
+tempo, beat_frames = librosa.beat.beat_track(y=y_percussive, sr=sr)
 # with open("temp.pkl","wb") as f:
 #     pickle.dump([y,sr,y_harmonic,y_percussive,tempo,beat_frames],f)
-with open("temp.pkl", "rb") as f:
-    y, sr, y_harmonic, y_percussive, tempo, beat_frames = pickle.load(f)
+# with open("temp.pkl", "rb") as f:
+#     y, sr, y_harmonic, y_percussive, tempo, beat_frames = pickle.load(f)
 # 淡入淡出部分重叠？
 # 每一段开始结束响度一样？
 time = librosa.get_duration(y=y, sr=sr)
