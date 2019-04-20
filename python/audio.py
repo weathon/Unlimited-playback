@@ -11,8 +11,11 @@ path = input("Path>")
 if not path:
     path = "test.mp3"
 y, sr = librosa.load(path)
+print(1)
 y_harmonic, y_percussive = librosa.effects.hpss(y)
+print(2)
 tempo, beat_frames = librosa.beat.beat_track(y=y_percussive, sr=sr)
+print(3)
 # with open("temp.pkl","wb") as f:
 #     pickle.dump([y,sr,y_harmonic,y_percussive,tempo,beat_frames],f)
 # with open("temp.pkl", "rb") as f:
@@ -101,4 +104,5 @@ for i in range(600,0,-1):
     
 
 # print(ans)
-librosa.output.write_wav("loop2"+".wav", y=ans, sr=sr)
+librosa.output.write_wav("loop"+".mp3", y=ans, sr=sr)
+#加上音频可视化，做成电脑软件
